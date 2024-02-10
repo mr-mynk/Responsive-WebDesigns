@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <title>Survey Form</title>
+  <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+  <h1 id='title'>freeCodeCamp Survey Form</h1>
+  <p id='description'><em>Thank you for taking the time to help us improve the platform</em></p>
+  <form id='survey-form'>
+    <fieldset id='f1'>
+      <label for='name' id='name-label'>Name <input id='name' type='text' placeholder='Enter your name'
+          required /></label>
+      <label for='email' id='email-label'>Email <input id='email' type='email' placeholder='Enter your Email'
+          required /></label>
+      <label for='age' id='number-label'>Age (optional) <input type='number' id='number' min='18' max='100'
+          placeholder='Age' />
+        <label for='role'>Which option best describes your current role?
+          <select id='role'>
+            <option value=''>Select current role</option>
+            <option value='1'>Student</option>
+            <option value='2'>Full Time Job</option>
+            <option value='3'>Full Time learner</option>
+            <option value='4'>Prefer not to say</option>
+            <option value='5'>Other</option>
+          </select>
+        </label>
+
+    </fieldset>
+
+    <fieldset>
+      <label>Would you recommend freeCodeCamp to a friend?
+        <label>
+          <input type='radio' name='recomm' value='definitely' checked> Definitely</label>
+        <label><input type='radio' name='recomm' value='Maybe'> Maybe </label><label><input type='radio' name='recomm'
+            value='Not sure' /> Not sure</label>
+      </label>
+      <label for='favfeature'>What is your favorite feature of freeCodeCamp?
+        <select id='dropdown'>
+          <option value=''>Select an option</option>
+          <option value='1'>Challenges</option>
+          <option value='2'>Projects</option>
+          <option value='3'>Community</option>
+          <option value='4'>Open Source</option>
+        </select>
+      </label>
+
+      <label id='cbox'>What would you like to see improved? (Check all that apply)
+        <label for='fp'><input type='checkbox' id='fp' value='fp'> Front-end Projects</label>
+        <label for='bp'><input type='checkbox' id='bp' value='bp'> Back-end Projects</label>
+        <label for='dv'><input type='checkbox' value='dv' id='dv'> Data Visualization</label>
+        <label for='ch'><input type='checkbox' value='ch' id='ch'> Challenges</label>
+        <label for='os'><input type='checkbox' value='os' id='os'> Open Source Community</label>
+        <label for='gh'><input type='checkbox' value='gh' id='gh'> Gitter help rooms</label>
+        <label for='vd'><input type='checkbox' value='vd' id='vd'> Videos</label>
+        <label for='cm'><input type='checkbox' value='cm' id='cm'> City Meetups</label>
+        <label for='wk'><input type='checkbox' value='wk' id='wk'> Wiki</label>
+        <label for='fr'><input type='checkbox' value='fr' id='fr'> Forum</label>
+        <label for='ac'><input type='checkbox' value='ac' id='ac'> Additional Courses</label>
+
+        <label for='comm'>Any Comments or suggestions?
+          <textarea placeholder='Enter your comment here...' rows=5></textarea></label>
+        <input type='submit' value='Submit' id='submit'>
+    </fieldset>
+  </form>
+
+</html>
+<style>
+  body {
+    margin: 2em;
+    background-color: rgba(27, 27, 50, 0.8);
+    color: #f3f3f3;
+    background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background: cover;
+  }
+
+  h1,
+  p {
+    text-align: center;
+    font-family: Poppins;
+  }
+
+  p {
+    font-style: italic;
+    font-family: Poppins;
+    font-size: 20px;
+  }
+
+  input::placeholder,
+  select,
+  textarea {
+    font-family: sans-serif;
+    font-size: 17px;
+    color: grey;
+
+  }
+
+  input,
+  label,
+  select,
+  textarea {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #cbox,
+  #dropdown,
+  #role {
+    margin: 5px;
+  }
+
+  #f1 input,
+  select {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    display: inline;
+    margin: 5px 0;
+    height: 17px;
+    width: 20px;
+    vertical-align: middle;
+  }
+
+  form {
+    width: 90%;
+    margin: auto;
+    background-color: rgba(27, 27, 50, 0.8);
+    min-width: 300px;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  input[type='submit'] {
+    width: 100%;
+    margin: 30px auto;
+    font-size: 17px;
+    background-color: #37af65;
+    border: none;
+    border-radius: 1px;
+    height: 50px;
+    color: inherit;
+  }
+
+  textarea {
+    width: 100%;
+    border: none;
+    border-radius: 1px;
+    height: 100px;
+    padding: 10px;
+  }
+</style>
